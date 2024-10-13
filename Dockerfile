@@ -6,7 +6,7 @@ RUN pip3 config set global.index-url https://mirrors.aliyun.com/pypi/web/simple
 
 WORKDIR /app
 ADD requirements.cuda.txt /app/
-RUN pip3 install -r requirements.cuda.txt
+RUN pip3 install -r requirements.txt
 
 ADD . /app/
 ENTRYPOINT ["python3", "app.py"]
